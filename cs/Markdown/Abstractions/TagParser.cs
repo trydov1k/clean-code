@@ -3,7 +3,7 @@ using Markdown.Models;
 
 namespace Markdown.Abstractions;
 
-public abstract class TagParser(string text, StringBuilder buffer, List<Token> tokens)
+public abstract class TagParser(string text, StringBuilder buffer, List<Token> tokens) : ITagParser
 {
     public abstract bool TryParse(ref int currentPosition);
 
